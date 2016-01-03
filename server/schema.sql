@@ -2,8 +2,12 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE messages (
-  /* Describe your table here.*/
+CREATE TABLE archives (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `roomName` MEDIUMTEXT NULL DEFAULT NULL,
+  `username` MEDIUMTEXT NULL DEFAULT NULL,
+  `message` MEDIUMTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 );
 
 /* Create other tables and define schemas for them here! */
