@@ -1,5 +1,7 @@
 var express = require('express');
 var db = require('./db');
+var http = require('./request-handler.js');
+var utils = require('./utils.js');
 
 // Middleware
 var morgan = require('morgan');

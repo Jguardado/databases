@@ -20,9 +20,9 @@ module.exports = {
   messages: makeModel({
     get: ['SELECT messages.id, messages.text, messages.roomname, messages.username',
           'FROM MESSAGES left outer join users on (message.userid = userid)',
-          'order by message.id desc;',].join(),
+          'order by message.id desc;', ].join(),
     post: ['INSERT INTO messages(text, userid, roomname)',
-           'values(?, (SELECT id from USERS where username = ? limit 1), ?)', ].join(' '),
+           'values(?, (SELECT id from USERS where username = ? limit 1), ?)',].join(' '),
   }),
   users: makeModel({
     get: 'Select * from users',
